@@ -14,6 +14,33 @@
 	</properties>
 
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>3.5</version>
+				<!-- 
+				<configuration>
+					<goalPrefix>hello-maven-plugin</goalPrefix>
+					<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+				</configuration>
+				<executions>
+					<execution>
+						<id>mojo-descriptor</id>
+						<goals>
+							<goal>descriptor</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>help-goal</id>
+						<goals>
+							<goal>helpmojo</goal>
+						</goals>
+					</execution>
+				</executions>
+				 -->
+			</plugin>
+		</plugins>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -61,7 +88,7 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-		<distributionManagement>
+	<distributionManagement>
 		<repository>
 			<id>fsdmdept-release</id>
 			<name>Release Repository</name>
